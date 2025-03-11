@@ -11,13 +11,15 @@ function FormComponent(){
     const inputName = useRef()
     const inputAge = useRef()
     const inputEmail = useRef()
+    const inputTel = useRef()
   
     async function registerUser(){
 
         await api.post('/users', {
         email: inputEmail.current.value,
         age: parseInt(inputAge.current.value),
-        name: inputName.current.value
+        name: inputName.current.value,
+        telefone: inputTel.current.value
       },
     
       navigate('/users'))
@@ -29,8 +31,8 @@ function FormComponent(){
 
             <ContainerInput>
                 <div>
-                <InputLabel>Nome<span>*</span></InputLabel>
-                <Input type="text" placeholder="Digite seu nome" ref={inputName}/>
+                <InputLabel>Telefone<span>*</span></InputLabel>
+                <Input type="text" placeholder="Digite seu telefone" ref={inputTel}/>
                 </div>
 
                 <div>
@@ -38,6 +40,11 @@ function FormComponent(){
                 <Input type="number" placeholder="Digite sua idade" ref={inputAge}/>
                 </div>
             </ContainerInput>
+
+            <div style={{width: "100%"}}>
+                <InputLabel>Nome<span>*</span></InputLabel>
+                <Input type="text" placeholder="Digite seu nome" ref={inputName}/>
+                </div>
 
             <div style={{width: "100%"}}>
                 <InputLabel>E-mail<span>*</span></InputLabel>

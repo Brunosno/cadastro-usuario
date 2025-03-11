@@ -40,6 +40,7 @@ const navigate = useNavigate();
                             <h3>{user.name}</h3>
                             <p>Email: {user.email}</p>
                             <span>Idade: {user.age}</span>
+                            <span>Telefone: {user.phone}</span>
                         </div>
 
                         <ion-icon className={styles.ionIcon} name="close-outline" onClick={() => deleteUser(user.id)}></ion-icon>
