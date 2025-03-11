@@ -19,7 +19,7 @@ function FormComponent(){
         email: inputEmail.current.value,
         age: parseInt(inputAge.current.value),
         name: inputName.current.value,
-        telefone: inputTel.current.value
+        phone: inputTel.current.value
       },
     
       navigate('/users'))
